@@ -1,0 +1,261 @@
+body {
+  background-color: #000;
+  color: #2e2e2e;
+  font-family: 'Lato', sans-serif;
+}
+#logoHeader {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  align-content: center;
+  z-index: 1;
+}
+#logo {
+  width: 200px;
+  background-color: transparent;
+  padding: 9px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.dropdowns{ 
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  background: #000;
+}
+.dropdowns img{
+  width: 100%;
+}
+
+.skillSection{  
+  background-color: #d3c4b0;
+  color: #000000;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+}
+
+.skillColumns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillStars{
+ font-size: 15px;
+}
+
+.fa {
+padding: 0 0 1px 0;
+}
+
+.skillList li{
+  text-transform: capitalize;
+}
+
+.skillList{
+  font-size: 15px;
+  line-height: 16px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative; /* Relative position needed for parallax scrolling effect as my unexpected element. Please also see line 96. See JS:30 for reference. Code from @link https://youtu.be/hJTNCR75vc0 */
+  font-family: 'Lato', sans-serif;
+  border: 20px solid#d3c4b0;
+}
+.textWrapper {
+  text-align: center;
+  padding: 0 15px 20px 15px;
+}
+
+
+.subHeadline {
+  font-family: 'Poiret One', cursive;
+  font-size: 30px;
+  color:#46382B;
+  padding-bottom: 10px;
+}
+
+.parallax {
+  position: absolute; /* Absolute position needed for parallax scrolling effect as my unexpected element. Please also see line 71. See JS:30 for reference. Code from @link https://youtu.be/hJTNCR75vc0  */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overflow {
+  height: 2vh; /* Space between logo and dropdowns */
+}
+
+main {
+  padding: 20px;
+  /* display: grid; */
+}
+
+h2 {
+  background-color: #9E7F61;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.active, .caretDown{
+  background:none; /* I'd wanted to use "all: unset;" but CSS Validator says the property "all" does not exist, even though it does. */
+  border:none;   
+  cursor: pointer;
+ 
+}
+#skillsHeader{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.resume{
+  width: 100px;
+}
+
+#contactForm, .educationList, .experienceList .portfolioList{
+  background-color: #d3c4b0;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.formFields{
+width: 98.5%;
+border: none;
+border-bottom: .5px solid #000;
+background: transparent;
+outline: none;
+margin: 5px 5px 5px 0;
+font-family: 'Lato', sans-serif;
+font-size: 12px;
+}
+
+form label{
+  font-size: 12px;
+  font-weight: bold;
+}
+#submitButton{
+  cursor: pointer;
+  background-color: #9E7F61;
+  width: 100px;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#errorMessageSwear, #errorMessageName, #errorMessageEmail, #errorMessageSubject, #errorMessageBody{
+  color: #FC5C47;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#objective{
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+#gitLink{
+  padding-bottom: 10px;
+  font-size: 12px;
+  padding-left: 4px;
+  
+}
+#gitLink a:visited{
+  color: #000;
+}
+
+.institutionOrPosition{
+  font-weight: bold;
+  font-size: 14px;
+  
+}
+.programOrCompany{
+  font-style: italic;
+  font-size: 12px;
+  padding-bottom: 10px;
+ 
+
+}
+.programDescription{
+font-size: 12px;
+list-style-type: disc;
+list-style-position: outside;
+padding-bottom: 5px;
+}
+
+.educationList ul{
+  margin-left: 15px;
+}
+
+#education li {
+  padding: 5px;
+}
+
+
+h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: #9E7F61;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 150px;
+  color: #46382B;
+}
+  
+.expanded {
+  max-height: unset;
+}
+/*
+ @media (min-width: 600px){ /*ipad */
+/* main{
+  padding-left: 120px; */
+/* }
+  h2{
+      width: 350px;       
+    }
+  .skillSection{
+    width: 350px;
+  }
+  #portfolio.dropdowns {
+    width: 390px;
+  }
+  #experience.dropdowns{
+    width: 390px;
+  }
+  #education.dropdowns{
+    width: 390px;
+  }
+  #contact.dropdowns{
+    width: 390px;
+  }
+} */
+
+/* @media (min-width: 1000px){ /*website */
+/* main{
+  width: 100%; */ 
+
+/* }
+} */ 
